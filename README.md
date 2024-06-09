@@ -225,6 +225,7 @@ systemctl status snell-server
 </p>
 </details>
 
+
 <details><summary>Trojan-go节点搭建</summary>
 <p>
 
@@ -236,22 +237,61 @@ systemctl status snell-server
 wget https://github.com/gfw-report/trojan-go/releases/download/v0.10.10/trojan-go-linux-amd64.zip && unzip trojan-go-linux-amd64.zip -d ./trojan-go && mv trojan-go/trojan-go /usr/local/bin && chmod +x /usr/local/bin/trojan-go && rm -rf trojan-go  trojan-go-linux-amd64.zip
 ```
     
-- **下载配置文件**
+- **创建配置文件**
 
 ```
-mkdir /etc/trojan-go && curl -Lo /etc/trojan-go/config.json https://raw.githubusercontent.com/MHY2233/Trojan-Go/main/config.json
+mkdir /etc/trojan-go && vim /etc/trojan-go/config.json
+```
+写入以下内容
+```
+{
+    "run_type": "server",
+    "local_addr": "0.0.0.0",
+    "local_port": 443,
+    "remote_addr": "127.0.0.1",
+    "remote_port": 80,
+    "password": [
+        "xHvse7n9wLy#aBB$"
+    ],
+    "ssl": {
+        "cert": "/etc/nginx/ssl/fullchain.pem",
+        "key": "/etc/nginx/ssl/private.key",
+        "sni": "domain.com",
+        "fallback_prt": 1234
+    }
+}
 ```
     
-- **下载 service 文件**
+- **创建 service 文件**
 
 ```
-curl -Lo /etc/systemd/system/trojan-go.service https://raw.githubusercontent.com/MHY2233/Trojan-Go/main/trojan-go.service && systemctl daemon-reload
+vim /etc/systemd/system/trojan-go.service
+```
+写入以下内容
+```
+[Unit]
+Description=Trojan-Go - An unidentifiable mechanism that helps you bypass GFW
+Documentation=https://p4gefau1t.github.io/trojan-go/
+After=network.target nss-lookup.target
+
+[Service]
+User=root
+CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
+AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
+NoNewPrivileges=true
+ExecStart=/usr/local/bin/trojan-go -config /etc/trojan-go/config.json
+Restart=on-failure
+RestartSec=10s
+LimitNOFILE=infinity
+
+[Install]
+WantedBy=multi-user.target
 ```
     
 - **开启 Trojan-Go**
 
 ```
-systemctl enabel --now trojan-go
+systemctl daemon-reload && systemctl enabel --now trojan-go
 ```    
 - **查看运行状态**
 
@@ -275,5 +315,7 @@ systemctl disable --now trojan-go && rm -rf /usr/local/bin/trojan-go /usr/local/
 ```
 <p>
 </details>
+
+
 
 
