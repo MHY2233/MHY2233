@@ -1,5 +1,5 @@
-# 手动搭建一些东西
-
+|# 手动搭建一些东西|
+-----------------
 #### [Tuic节点搭建](https://github.com/MHY2233/MHY2233/blob/main/Tutorial/Tuic%E8%8A%82%E7%82%B9%E6%90%AD%E5%BB%BA.md)
 
 #### [Alist手动搭建](https://github.com/MHY2233/MHY2233/blob/main/Tutorial/Alist%E6%89%8B%E5%8A%A8%E6%90%AD%E5%BB%BA.md)
