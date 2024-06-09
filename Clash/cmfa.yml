@@ -71,7 +71,7 @@ proxies:
     type: trojan
     server: linkload.io                          
     port: 443                                     
-    password: xHvse7n9wLy#aBBMhy2253                            
+    password: nopassword                           
     client-fingerprint: chrome
     udp: true
     sni: linkload.io                         
@@ -83,7 +83,7 @@ proxies:
     type: trojan
     server: mhy2253.com                          
     port: 443                                     
-    password: fullchain.pem_private.key                              
+    password: nopassword                             
     client-fingerprint: chrome
     udp: true
     sni: mhy2253.com                       
