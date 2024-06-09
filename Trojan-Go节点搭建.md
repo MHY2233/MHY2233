@@ -1,6 +1,6 @@
 - **先安装NGINX**
 
-### [官方安装教程](https://nginx.org/en/linux_packages.html#Debian)
+### [NGINX官方安装教程](https://nginx.org/en/linux_packages.html#Debian)
 
 
 
