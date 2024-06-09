@@ -36,6 +36,8 @@ WantedBy=multi-user.target
 ```
 systemctl daemon-reload && systemctl enable --now alist
 ```
+</p>
+</details>
 
 ## 在R4S软路由上部署
 
