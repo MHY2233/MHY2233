@@ -4,8 +4,13 @@
 # [Snell 官方手册](https://manual.nssurge.com/others/snell.html)
 
 - **1. 下载 Snell Server 安装包**
+X86_AMD64
 ```
 wget https://dl.nssurge.com/snell/snell-server-v4.0.1-linux-amd64.zip
+```
+ARM 
+```
+wget https://dl.nssurge.com/snell/snell-server-v4.0.1-linux-aarch64.zip
 ```
 - **2. 解压 Snell Server 到指定目录**
 ```
