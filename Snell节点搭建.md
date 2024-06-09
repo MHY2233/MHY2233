@@ -1,6 +1,3 @@
-<details><summary>Snell节点搭建</summary>
-<p>
-
 # [Snell 官方手册](https://manual.nssurge.com/others/snell.html)
 
 - **1. 下载 Snell Server 安装包**
@@ -58,5 +55,3 @@ systemctl enable --now snell-server
 ```
 systemctl status snell-server
 ```
-</p>
-</details>
