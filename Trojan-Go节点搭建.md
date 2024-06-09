@@ -1,3 +1,18 @@
+- **先安装
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <details><summary>Trojan-Go节点搭建</summary>
 <p>
 
