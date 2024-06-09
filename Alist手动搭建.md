@@ -31,6 +31,6 @@ chmod +x /etc/init.d/alist
 - **启动脚本**
 ```
 /etc/init.d/alist enable --now
-
+```
 
 
