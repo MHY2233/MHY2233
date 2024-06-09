@@ -226,7 +226,7 @@ systemctl status snell-server
 </details>
 
 
-<details><summary>Trojan-go节点搭建</summary>
+<details><summary>Trojan-Go节点搭建</summary>
 <p>
 
 # [trojan-go版本查看](https://github.com/p4gefau1t/trojan-go) 
