@@ -99,9 +99,13 @@ Environment=MONOIO_FORCE_LEGACY_DRIVER=1
 [Install]
 WantedBy=multi-user.target
 ```
-- **重载&启动服务**
+- **4.重载&启动服务**
 ```
 systemctl daemon-reload && systemctl enable --now shadow-tls.service
+```
+- 5.**查看服务状态**
+```
+systemctl status shadow-tls.service
 ```
 
 
