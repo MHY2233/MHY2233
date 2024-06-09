@@ -117,7 +117,7 @@ systemctl status shadow-tls.service
 
 ### Surge节点配置写法
 ```
-Snell+TLS = snell, vps的ip或域名, 8443, psk=GLk1ff4wuQNCDSqr97WwsHwe8KBjy3S, version=4, shadow-tls-password=JsJeWtjiUyVgh0ooqQ, shadow-tls-sni=mp.weixin.qq.com, shadow-tls-version=3
+Snell+TLS = snell, vps的ip或域名, 8443, psk=GLk1ff4wuQNCDSqr97WwsHwe8KBjy3S, version=4, shadow-tls-password=JsJeWtjiUyVgh0ooqQ, shadow-tls-sni=gateway.icloud.com, shadow-tls-version=3
 
 ```
 
