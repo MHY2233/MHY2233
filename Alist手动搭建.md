@@ -24,7 +24,7 @@ After=network.target
  
 [Service]
 Type=simple
-WorkingDirectory=path_alist
+WorkingDirectory=/usr/local/bin
 ExecStart=/usr/local/bin/alist server
 Restart=on-failure
  
