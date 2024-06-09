@@ -4,6 +4,8 @@
 ```
 cd /usr/bin && wget https://github.com/alist-org/alist/releases/download/v3.35.0/alist-linux-musl-arm64.tar.gz && tar -zxvf alist-linux-musl-arm64.tar.gz && chmond +x alist && rm alist-linux-musl-arm64.tar.gz -y
 ```
+- **设置密码**
+./alist set admin password
 - **创建开机启动脚本**
 ```
 vim /etc/init.d/alist
