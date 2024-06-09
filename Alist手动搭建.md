@@ -1,5 +1,6 @@
 # [最新版本](https://github.com/alist-org/alist/releases)
 
+## [官方安装教程](https://alist.nn.ci/zh/guide/install/script.html)
 
 ## 在VPS服务器上部署
 
