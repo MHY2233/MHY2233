@@ -1,6 +1,4 @@
-
-
-<details><summary>CloudDrive-2服务部署部署</summary>
+<details><summary>CloudDrive-2服务部署</summary>
 <p>
   
 # [查看最新发行版](https://github.com/cloud-fs/cloud-fs.github.io/releases) 
