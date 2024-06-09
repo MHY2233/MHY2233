@@ -1,3 +1,6 @@
+<details><summary>1. 安装nginx </summary>
+<p>
+
 ### [NGINX安装](https://nginx.org/en/linux_packages.html#Debian)
  
 ### nginx配置
@@ -31,6 +34,8 @@ nginx -s reload
 systemctl restart ngunx 
 ```
 
+<p>
+</details>
 
 
 
@@ -40,8 +45,7 @@ systemctl restart ngunx
 
 
 
-
-<details><summary>Trojan-Go节点搭建</summary>
+<details><summary>2. Trojan-Go节点搭建</summary>
 <p>
 
 # [trojan-go版本查看](https://github.com/p4gefau1t/trojan-go) 
