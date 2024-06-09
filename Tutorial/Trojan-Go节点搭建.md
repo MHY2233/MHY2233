@@ -1,4 +1,4 @@
-# [trojan-go版本查看](https://github.com/p4gefau1t/trojan-go) 
+# [Trojan-Go版本查看](https://github.com/p4gefau1t/trojan-go) 
 
 
 <details><summary>1. 安装nginx </summary>
