@@ -1,7 +1,9 @@
 ### [NGINX安装](https://nginx.org/en/linux_packages.html#Debian)
+ 
+### nginx配置
+```
 
-
-
+```
 
 
 
