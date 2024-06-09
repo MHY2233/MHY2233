@@ -6,8 +6,8 @@ server {
     listen 1234 ssl;
     server_name example.com;  # 将 example.com 替换为你的域名
 
-    ssl_certificate /etc/letsencrypt/live/example.com/fullchain.pem;  # 替换为你的证书路径
-    ssl_certificate_key /etc/letsencrypt/live/example.com/privkey.pem;  # 替换为你的私钥路径
+    ssl_certificate /etc/nginx/ssl/fullchain.pem;  # 替换为你的证书路径
+    ssl_certificate_key /etc/nginx/ssl/privkey.key;  # 替换为你的私钥路径
 
     ssl_protocols TLSv1.2 TLSv1.3;
     ssl_ciphers HIGH:!aNULL:!MD5;
