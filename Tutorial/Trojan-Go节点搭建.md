@@ -45,7 +45,7 @@ systemctl restart ngunx
 
 
 
-<details><summary>2. Trojan-Go节点搭建</summary>
+<details><summary>2. 安装Trojan-Go</summary>
 <p>
 
 # [trojan-go版本查看](https://github.com/p4gefau1t/trojan-go) 
