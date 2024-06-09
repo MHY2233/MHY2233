@@ -1,4 +1,4 @@
-# [最新版本](https://github.com/alist-org/alist/releases)
+## [最新版本](https://github.com/alist-org/alist/releases)
 
 
 ## 在VPS服务器上部署
