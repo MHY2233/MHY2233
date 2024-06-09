@@ -1,7 +1,6 @@
 # 手动搭建一些东西
 |部署项目|教程链接|
 |-------|------|
-|-------|------|
 | TUIC  |[搭建教程](https://github.com/MHY2233/MHY2233/blob/main/Tutorial/Tuic%E8%8A%82%E7%82%B9%E6%90%AD%E5%BB%BA.md) |
 |-------|------|
 | ALIST | [搭建教程](https://github.com/MHY2233/MHY2233/blob/main/Tutorial/Alist%E6%89%8B%E5%8A%A8%E6%90%AD%E5%BB%BA.md)|
