@@ -1,4 +1,4 @@
-<center>手动搭建步骤</center>
+<center> 手动搭建步骤 </center>
 
 
 |部署项目|教程链接|
