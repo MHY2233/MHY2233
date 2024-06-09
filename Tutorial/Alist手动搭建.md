@@ -2,7 +2,8 @@
 
 ## [官方安装教程](https://alist.nn.ci/zh/guide/install/script.html)
 
-## 在VPS服务器上部署
+<details><summary>在VPS服务器上部署</summary>
+<p>
 
 - **下载安装程序**
 ```
