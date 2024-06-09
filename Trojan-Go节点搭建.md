@@ -26,6 +26,10 @@ nginx -t
 ```
 nginx -s reload
 ```
+### 重启nginx
+```
+systemctl restart ngunx 
+```
 
 
 
