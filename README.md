@@ -291,7 +291,7 @@ WantedBy=multi-user.target
 - **开启 Trojan-Go**
 
 ```
-systemctl daemon-reload && systemctl enabel --now trojan-go
+systemctl daemon-reload && systemctl enable --now trojan-go
 ```    
 - **查看运行状态**
 
