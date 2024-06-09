@@ -1,4 +1,4 @@
-# 手动搭建步骤
+<center># 手动搭建步骤</center>
 |部署项目|教程链接|
 |-------|------|
 | `TUIC`  |[搭建教程](https://github.com/MHY2233/MHY2233/blob/main/Tutorial/Tuic%E8%8A%82%E7%82%B9%E6%90%AD%E5%BB%BA.md) |
