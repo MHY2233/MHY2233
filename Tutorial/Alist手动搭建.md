@@ -39,7 +39,8 @@ systemctl daemon-reload && systemctl enable --now alist
 </p>
 </details>
 
-## 在R4S软路由上部署
+<details><summary>在R4S软路由上部署</summary>
+<p>
 
 - **下载安装程序**
 ```
@@ -73,5 +74,6 @@ chmod +x /etc/init.d/alist
 ```
 /etc/init.d/alist enable --now
 ```
-
+</p>
+</details>
 
