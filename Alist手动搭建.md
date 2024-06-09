@@ -1,7 +1,7 @@
 # [最新版本](https://github.com/alist-org/alist/releases)
 
 
-## 在VPS服务器上部署
+### 在VPS服务器上部署
 
 - **下载安装程序**
 ```
@@ -35,7 +35,7 @@ WantedBy=multi-user.target
 systemctl daemon-reload && systemctl enable --now alist
 ```
 
-## 在R4S软路由上部署
+### 在R4S软路由上部署
 
 - **下载安装程序**
 ```
