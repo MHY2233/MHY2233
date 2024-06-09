@@ -1,3 +1,6 @@
+# [trojan-go版本查看](https://github.com/p4gefau1t/trojan-go) 
+
+
 <details><summary>1. 安装nginx </summary>
 <p>
 
@@ -47,8 +50,6 @@ systemctl restart ngunx
 
 <details><summary>2. 安装Trojan-Go</summary>
 <p>
-
-# [trojan-go版本查看](https://github.com/p4gefau1t/trojan-go) 
 
 - **安装 Trojan-GO**
 
