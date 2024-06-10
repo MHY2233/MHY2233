@@ -8,7 +8,7 @@
 |`Trojan-Go`|[`搭 建 教 程`](https://github.com/MHY2233/MHY2233/blob/main/Tutorial/Trojan-Go%E8%8A%82%E7%82%B9%E6%90%AD%E5%BB%BA.md)|
 |`ShadowSocks-Rust`|[`搭 建 教 程`](https://github.com/MHY2233/MHY2233/blob/main/Tutorial/ShadowSocks.md)|
 |`Snell&Shadow-Tls v3`|[`搭 建 教 程`](https://github.com/MHY2233/MHY2233/blob/main/Tutorial/Snell+Shadow-tls%20v3%E9%83%A8%E7%BD%B2.md)|
-|`使用 ACME 申请安装证书`|[使 用 教 程`](666)
+|`使用 ACME 申请安装证书`|[`使 用 教 程`](https://github.com/MHY2233/MHY2233/blob/main/Tutorial/%E4%BD%BF%E7%94%A8ACME%E7%94%B3%E8%AF%B7%E8%AF%81%E4%B9%A6.md)
 
 
 
