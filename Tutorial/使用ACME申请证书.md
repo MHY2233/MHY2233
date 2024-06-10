@@ -49,7 +49,7 @@ acme.sh --install-cert -d example.com \
 --fullchain-file /path/to/fullchain/nginxconfig/fullchain.cer \
 --reloadcmd     "service nginx force-reload"
 ```
-> 除此之外, 证书默认 90 天有效, 90 天后会过期, 如果使用 acme.sh 会自动帮我们每天 renew
+> 证书默认 90 天有效, 90 天后会过期, 如果使用 acme.sh 会自动帮我们每天 renew.
 
 
 
