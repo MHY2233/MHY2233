@@ -1,11 +1,11 @@
 # [查看最新发行版](https://github.com/cloud-fs/cloud-fs.github.io/releases) 
 
-> ## VPS服务器部署
+## VPS服务器部署
 
-- **1.安装程序**
+> - **1.安装程序**
 
 ```
-wget https://github.com/cloud-fs/cloud-fs.github.io/releases/download/v0.7.3/clouddrive-2-linux-aarch64-0.7.3.tgz && tar -zxvf clouddrive-2-linux-aarch64-0.6.14.tgz && mv clouddrive-2-linux-aarch64-0.6.14 /usr/local/bin/clouddrive-2 && rm ~/clouddrive-2-linux-aarch64-0.7.3.tgz
+> wget https://github.com/cloud-fs/cloud-fs.github.io/releases/download/v0.7.3/clouddrive-2-linux-aarch64-0.7.3.tgz && tar -zxvf clouddrive-2-linux-aarch64-0.6.14.tgz && mv clouddrive-2-linux-aarch64-0.6.14 /usr/local/bin/clouddrive-2 && rm ~/clouddrive-2-linux-aarch64-0.7.3.tgz
 ```
 
 - **2.配置开机启动**
