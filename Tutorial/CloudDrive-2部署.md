@@ -67,11 +67,11 @@ start_service() {
 ```
 chmod +x /etc/init.d/clouddrive-2_service && /etc/init.d/clouddrive-2_service start
 ```
-- ### 4. 设置开机启动
+> ### 4. 设置开机启动
 ```
 /etc/init.d/clouddrive-2_service enable
 ```
-> ### 4. 查看是否生效
+> ### 5. 查看是否生效
 ```
 ls -l /etc/rc.d
 ```
