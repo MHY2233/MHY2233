@@ -1,10 +1,11 @@
-OpenWrt 22.03 安装 Tailscale 方法：
+# OpenWrt 22.03 安装 Tailscale 方法：
 
-第一步 安装Tailscale
-
+> ## 第一步 安装Tailscale
+```
 opkg update
 opkg install tailscale
 opkg install iptables-nft
+```
 第二步 启动Tailscale，并关联账户
 
 service tailscale restart
