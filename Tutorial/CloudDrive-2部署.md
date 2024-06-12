@@ -1,7 +1,6 @@
 # [查看最新发行版](https://github.com/cloud-fs/cloud-fs.github.io/releases) 
 
-<details><summary>VPS服务器部署</summary>
-<p>
+> ## VPS服务器部署
 
 - **1.安装程序**
 
@@ -39,11 +38,8 @@ systemctl enable --now clouddrive
 ```
 systemctl status clouddrive
 ```
-</p>
-</details>
 
-<details><summary>OPENWRT软路由部署</summary>
-<p>
+> ## OPENWRT软路由部署</summary>
 
 - **1.下载安装程序**
 ```
@@ -73,11 +69,9 @@ chmod +x /etc/init.d/clouddrive-2_service && /etc/init.d/clouddrive-2_service st
 ```
 - **4.设置开机启动**
 ```
-/etc/init.d/my_service enable
+/etc/init.d/clouddrive-2_service enable
 ```
 - **4.查看是否生效
 ```
 ls -l /etc/rc.d
 ```
-</p>
-</details>
