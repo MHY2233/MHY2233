@@ -71,7 +71,7 @@ chmod +x /etc/init.d/clouddrive-2_service && /etc/init.d/clouddrive-2_service st
 ```
 /etc/init.d/clouddrive-2_service enable
 ```
-- **4.查看是否生效
-> ```
+> - **4.查看是否生效**
+```
 ls -l /etc/rc.d
 ```
