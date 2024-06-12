@@ -14,14 +14,15 @@ service tailscale restart
 
 tailscale up --accept-dns=false --advertise-routes=10.254.1.0/24 --netfilter-mode=off
 ```
-在OpenWrt→状态→系统日志中，找到Tailscale关联账户的链接，将设备添加至自己的Tailscale账户。
+> 在OpenWrt→状态→系统日志中，找到Tailscale关联账户的链接，将设备添加至自己的Tailscale账户。
 
-第三步 设置Tailscale自启动
+> ## 第三步 设置Tailscale自启动
 
-在OpenWrt→系统→启动项→本地启动脚本中，将原有的Tailscale命令删除（若有），并添加一行：
-
+> 在OpenWrt→系统→启动项→本地启动脚本中，将原有的Tailscale命令删除（若有），并添加一行：
+```
 tailscale up --netfilter-mode=off
-第四步 网络及防火墙设置
+```
+> ## 第四步 网络及防火墙设置
 
 1.创建一个新接口，路径：OpenWrt→网络→接口→添加新接口
 
