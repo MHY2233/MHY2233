@@ -135,6 +135,30 @@ rule-providers:
     path: './RuleSet/ChinaIPs_Classical.yaml'
 # 分流规则指向
 rules:
+  - GEOSITE,openai,Proxy
+  - GEOSITE,onedrive,Proxy
+  - GEOSITE,youtube,Proxy  
+  - GEOSITE,telegram,Proxy
+  - GEOSITE,netflix,Proxy
+  - GEOSITE,disney,Proxy
+  - GEOSITE,spotify,Proxy
+  - GEOSITE,tiktok,Proxy
+  - GEOSITE,facebook,Proxy
+  - GEOSITE,twitter,Proxy
+  - GEOSITE,google,Proxy
+  - GEOSITE,category-scholar-!cn,Proxy
+  - GEOSITE,geolocation-!cn,Proxy
+  - RULE-SET,gfw,Proxy
+  - RULE-SET,direct,DIRECT
+  - RULE-SET,lancidr,DIRECT
+  - GEOSITE,cn,DIRECT  
+#IP规则    
+  - GEOIP,private,DIRECT,no-resolve 
+  - RULE-SET,cncidr,DIRECT
+  - GEOIP,telegram,Proxy,no-resolve
+  - GEOIP,netflix,Proxy,no-resolve
+  - GEOIP,google,Proxy,no-resolve
+  - GEOIP,twitter,Proxy,no-resolve
   - RULE-SET,ChinaMedia,DIRECT
   - RULE-SET,GlobalMedia,Proxy
   - RULE-SET,Apple,DIRECT
