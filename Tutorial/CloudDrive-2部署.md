@@ -41,11 +41,11 @@ systemctl status clouddrive
 
 # OPENWRT软路由部署</summary>
 
-> - **1.下载安装程序**
+> ### 1. 下载安装程序
 ```
 wget https://linkroad.io/proxy-tools/package/-/raw/main/clouddrive-2-linux-aarch64-0.7.3.tgz && tar -zxvf clouddrive-2-linux-aarch64-0.7.3.tgz && mv clouddrive-2-linux-aarch64-0.7.3 /usr/bin && rm clouddrive-2-linux-aarch64-0.7.3.tgz 
 ```
-> - **2.配置开机启动**
+> ### 2. 配置开机启动
 ```
 vim /etc/init.d/clouddrive-2_service
 ```
@@ -63,15 +63,15 @@ start_service() {
 ```
 
 
-> - **3.赋予可执行权限并启动**
+> ### 3. 赋予可执行权限并启动
 ```
 chmod +x /etc/init.d/clouddrive-2_service && /etc/init.d/clouddrive-2_service start
 ```
-- **4.设置开机启动**
+- ### 4. 设置开机启动
 ```
 /etc/init.d/clouddrive-2_service enable
 ```
-> - **4.查看是否生效**
+> ### 4. 查看是否生效
 ```
 ls -l /etc/rc.d
 ```
