@@ -12,9 +12,7 @@ opkg install iptables-nft
 ```
 service tailscale restart
 
-tailscale up --accept-dns=false --advertise-routes=10.254.1.0/24  --advertise-exit-node
-
-tailscale up --advertise-routes=192.168.0.0/24 --advertise-exit-node --accept-dns=false
+tailscale up --advertise-routes=10.254.1.0/24 --advertise-exit-node --accept-dns=false
 ```
 > 在OpenWrt→状态→系统日志中，找到Tailscale关联账户的链接，将设备添加至自己的Tailscale账户。
 
