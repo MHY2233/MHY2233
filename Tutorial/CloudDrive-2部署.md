@@ -10,7 +10,7 @@ wget https://github.com/cloud-fs/cloud-fs.github.io/releases/download/v0.7.3/clo
 
 > ### 2.配置开机启动
 ```
-vim /etc/systemd/system/clouddrive-2
+vim /etc/systemd/system/clouddrive-2.service
 ```
 写入以下内容
 ```
@@ -47,7 +47,7 @@ wget https://github.com/cloud-fs/cloud-fs.github.io/releases/download/v0.7.6/clo
 ```
 > ### 2. 配置开机启动
 ```
-vim /etc/init.d/clouddrive-2_service
+vim /etc/init.d/clouddrive-2
 ```
 输入以下内容
 ```
@@ -65,11 +65,11 @@ start_service() {
 
 > ### 3. 赋予可执行权限并启动
 ```
-chmod +x /etc/init.d/clouddrive-2_service && /etc/init.d/clouddrive-2_service start
+chmod +x /etc/init.d/clouddrive-2 && /etc/init.d/clouddrive-2 start
 ```
 > ### 4. 设置开机启动
 ```
-/etc/init.d/clouddrive-2_service enable
+/etc/init.d/clouddrive-2 enable
 ```
 > ### 5. 查看是否生效
 ```
