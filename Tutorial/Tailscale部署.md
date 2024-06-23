@@ -61,6 +61,9 @@ echo 'net.ipv6.conf.all.forwarding = 1' | tee -a /etc/sysctl.conf
 sysctl -p /etc/sysctl.conf
 ```
 
+> 2.将设备宣传为退出节点
+
+
 ```
 tailscale set --advertise-routes=192.168.100.0/24 --advertise-exit-node --accept-dns=false
  
