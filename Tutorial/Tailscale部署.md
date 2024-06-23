@@ -43,6 +43,10 @@ MSS钳制：开启
 允许来自源区域的转发：选择你的LAN（和/或其他内部区域，如果你不想将LAN流量路由到其他tailscale主机，则留空）
 点击“保存并应用”。
 ```
- 
 
+> ##第五步 开启子网路由和外出节点
+```
+tailscale set --advertise-routes=192.168.100.0/24 --advertise-exit-node --accept-dns=false
+ 
+```
 至此，就完成了在OpenWrt 22.03及更高版本安装Tailscale，并完成了基础配置。
