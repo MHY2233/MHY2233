@@ -44,7 +44,7 @@ MSS钳制：开启
 点击“保存并应用”。
 ```
 
-> ##第五步 开启子网路由和外出节点
+> ## 第五步 开启子网路由和外出节点
 ```
 tailscale set --advertise-routes=192.168.100.0/24 --advertise-exit-node --accept-dns=false
  
