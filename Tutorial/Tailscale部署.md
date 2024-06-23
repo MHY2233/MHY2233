@@ -54,6 +54,13 @@ echo 'net.ipv4.ip_forward = 1' |  tee -a /etc/sysctl.d/99-tailscale.conf
 echo 'net.ipv6.conf.all.forwarding = 1' |  tee -a /etc/sysctl.d/99-tailscale.conf
 sysctl -p /etc/sysctl.d/99-tailscale.conf
 ```
+否则，请使用：
+```
+echo 'net.ipv4.ip_forward = 1' |  tee -a /etc/sysctl.conf
+echo 'net.ipv6.conf.all.forwarding = 1' | tee -a /etc/sysctl.conf
+sysctl -p /etc/sysctl.conf
+```
+
 ```
 tailscale set --advertise-routes=192.168.100.0/24 --advertise-exit-node --accept-dns=false
  
