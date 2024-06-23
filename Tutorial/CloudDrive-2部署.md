@@ -10,7 +10,7 @@ wget https://github.com/cloud-fs/cloud-fs.github.io/releases/download/v0.7.3/clo
 
 > ### 2.配置开机启动
 ```
-vim /etc/systemd/system/clouddrive.service
+vim /etc/systemd/system/clouddrive-2
 ```
 写入以下内容
 ```
