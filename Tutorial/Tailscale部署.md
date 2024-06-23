@@ -45,6 +45,14 @@ MSS钳制：开启
 ```
 
 > ## 第五步 开启子网路由和外出节点
+
+> 1.开启ip转发
+如果您的Linux系统有一个/etc/sysctl.d目录，请使用：
+```
+echo 'net.ipv4.ip_forward = 1' |  tee -a /etc/sysctl.d/99-tailscale.conf
+echo 'net.ipv6.conf.all.forwarding = 1' |  tee -a /etc/sysctl.d/99-tailscale.conf
+sysctl -p /etc/sysctl.d/99-tailscale.conf
+```
 ```
 tailscale set --advertise-routes=192.168.100.0/24 --advertise-exit-node --accept-dns=false
  
