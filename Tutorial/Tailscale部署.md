@@ -69,6 +69,8 @@ sysctl -p /etc/sysctl.conf
 ```
 tailscale set --advertise-routes=10.0.0.0/24 --advertise-exit-node --accept-dns=false
 ```
-- **istoreos**输入以下命令**
-
+- **istoreos输入以下命令**
+```
+tailscale up --advertise-routes=10.0.0.0/24 --advertise-exit-node --accept-dns=false
+```
 至此，就完成了在OpenWrt 22.03及更高版本安装Tailscale，并完成了基础配置。
