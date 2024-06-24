@@ -1,6 +1,6 @@
 # OpenWrt 22.03 安装 Tailscale 方法：
 
-> ## 第一步 安装Tailscale
+## 第一步 安装Tailscale
 ```
 opkg update
 
@@ -8,7 +8,7 @@ opkg install tailscale
 
 opkg install iptables-nft
 ```
-> ## 第二步 启动Tailscale，并关联账户
+## 第二步 启动Tailscale，并关联账户
 - **istoreos输入以下命令：**
 ```
 service tailscale restart && tailscale up
@@ -19,13 +19,13 @@ service tailscale restart
 ```
 > 复制屏幕连接到浏览器打开并登录自己的tailscale账户。
 
-> ## 第三步 设置Tailscale自启动
+## 第三步 设置Tailscale自启动
 
 > 在OpenWrt→系统→启动项→本地启动脚本中，将原有的Tailscale命令删除（若有），并添加一行：
 ```
 tailscale up --netfilter-mode=off
 ```
-> ## 第四步 网络及防火墙设置
+## 第四步 网络及防火墙设置
 
 > 1.创建一个新接口，路径：OpenWrt→网络→接口→添加新接口
 ```
@@ -47,7 +47,7 @@ MSS钳制：开启
 点击“保存并应用”。
 ```
 
-> ## 第五步 开启子网路由和外出节点
+## 第五步 开启子网路由和外出节点
 
 > 1.开启ip转发
 
