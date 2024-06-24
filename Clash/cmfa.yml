@@ -172,24 +172,24 @@ dns:
 proxies:
   - name: "美国洛杉矶🇺🇸"                     
     type: trojan
-    server: linkload.io                          
+    server: domain.com                        
     port: 443                                     
-    password: xHvse7n9wLy#aBBMhy2253                            
+    password: password                           
     client-fingerprint: chrome
     udp: true
-    sni: linkload.io                         
+    sni: domain.com                         
     alpn:
       - h2
       - http/1.1
     skip-cert-verify: true
   - name: "日本🇯🇵"                     
     type: trojan
-    server: mhy2253.com                          
+    server: domain.com                         
     port: 443                                     
-    password: fullchain.pem_private.key                              
+    password: password                            
     client-fingerprint: chrome
     udp: true
-    sni: mhy2253.com                       
+    sni: domain.com                       
     alpn:
       - h2
       - http/1.1
