@@ -17,7 +17,7 @@ openwrt输入以下命令
 ```
 service tailscale restart
 ```
-> 在OpenWrt→状态→系统日志中，找到Tailscale关联账户的链接，将设备添加至自己的Tailscale账户。
+复制屏幕连接到浏览器打开并登录自己的tailscale账户。
 
 > ## 第三步 设置Tailscale自启动
 
