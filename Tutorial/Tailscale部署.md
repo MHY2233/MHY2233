@@ -1,4 +1,4 @@
-# OpenWrt 22.03 安装 Tailscale 方法：
+## Tailscale for OpenWrt安装：
 
 ### 第一步 安装Tailscale
 ```
