@@ -9,15 +9,15 @@ opkg install tailscale
 opkg install iptables-nft
 ```
 > ## 第二步 启动Tailscale，并关联账户
-istoreos输入以下命令：
+- **istoreos输入以下命令：**
 ```
 service tailscale restart && tailscale up
 ```
-openwrt输入以下命令
+- **openwrt输入以下命令:**
 ```
 service tailscale restart
 ```
-复制屏幕连接到浏览器打开并登录自己的tailscale账户。
+> 复制屏幕连接到浏览器打开并登录自己的tailscale账户。
 
 > ## 第三步 设置Tailscale自启动
 
