@@ -1,4 +1,6 @@
 payload:
+  - DOMAIN-SUFFIX,CN
+  - DONAIN,right.com.cn
   # 115
   - DOMAIN,fhnfile.oss-cn-shenzhen.aliyuncs.com
   - DOMAIN-SUFFIX,115.com
@@ -305,6 +307,26 @@ payload:
   - DOMAIN-SUFFIX,img4399.com
   - DOMAIN-SUFFIX,qq163.com
   - DOMAIN-SUFFIX,qq163.net
+  #51JOB
+  - DOMAIN-SUFFIX,51hr.com
+  - DOMAIN-SUFFIX,51ideal.com
+  - DOMAIN-SUFFIX,51jingying.com
+  - DOMAIN-SUFFIX,51job.com
+  - DOMAIN-SUFFIX,51jobcdn.com
+  - DOMAIN-SUFFIX,51laiqiang.com
+  - DOMAIN-SUFFIX,51mdd.com
+  - DOMAIN-SUFFIX,51miduoduo.com
+  - DOMAIN-SUFFIX,coolping.com
+  - DOMAIN-SUFFIX,correlation-one.cn
+  - DOMAIN-SUFFIX,ibmcampus.com
+  - DOMAIN-SUFFIX,maketion.com
+  - DOMAIN-SUFFIX,myyjs.com
+  - DOMAIN-SUFFIX,wuyoudagong.com
+  - DOMAIN-SUFFIX,xinghua.org.cn
+  - DOMAIN-SUFFIX,yingjiesheng.com
+  - DOMAIN-SUFFIX,yingjiesheng.net
+  - DOMAIN-SUFFIX,yingjiesheng.org
+  - DOMAIN-SUFFIX,zhiding.com.cn
   # 51job
   - DOMAIN-SUFFIX,51hr.com
   - DOMAIN-SUFFIX,51ideal.com
@@ -387,6 +409,13 @@ payload:
   - DOMAIN-SUFFIX,zhuancorp.com
   - DOMAIN-SUFFIX,zhuanspirit.com
   - DOMAIN-SUFFIX,zhuanzhuan.com
+  #ABC
+  - DOMAIN-SUFFIX,95599.cn
+  - DOMAIN-SUFFIX,abchina.com
+  - DOMAIN-SUFFIX,bscabank.com
+  - DOMAIN-SUFFIX,openaboc.cn
+  - DOMAIN-SUFFIX,openaboc.com
+  - DOMAIN-SUFFIX,openaboc.com.cn
   # acfun
   - DOMAIN-SUFFIX,acfun.cn
   - DOMAIN-SUFFIX,acfun.com
@@ -1866,7 +1895,7 @@ payload:
   - DOMAIN,tiebapic.baidu.com
   - DOMAIN-SUFFIX,tieba.baidu.com
   # baidu
-   DOMAIN-SUFFIX,17swan.com
+  - DOMAIN-SUFFIX,17swan.com
   - DOMAIN-SUFFIX,37swan.com
   - DOMAIN-SUFFIX,91.com
   - DOMAIN-SUFFIX,911dns.cn
@@ -4613,7 +4642,7 @@ payload:
   - IP-CIDR,23.53.32.88/32,no-resolve
   - PROCESS-NAME,com.qiyi.video
   # ifaner
-   DOMAIN-SUFFIX,01hub.com
+  - DOMAIN-SUFFIX,01hub.com
   - DOMAIN-SUFFIX,app.so
   - DOMAIN-SUFFIX,appsolution.cc
   - DOMAIN-SUFFIX,bitbe.at
@@ -4647,6 +4676,3 @@ payload:
   - DOMAIN-SUFFIX,xiaoapp.io
   - DOMAIN-SUFFIX,xiaoma.io
   - DOMAIN-SUFFIX,zhixiaochengxu.com
-
-
-
