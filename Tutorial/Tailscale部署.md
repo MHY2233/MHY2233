@@ -10,7 +10,7 @@ opkg install iptables-nft
 ```
 > ## 第二步 启动Tailscale，并关联账户
 ```
-service tailscale restart
+service tailscale restart && tailscale up
 
 tailscale up --advertise-routes=192.168.100.0/24 --advertise-exit-node --accept-dns=false
 ```
