@@ -64,10 +64,10 @@ echo 'net.ipv6.conf.all.forwarding = 1' | tee -a /etc/sysctl.conf
 sysctl -p /etc/sysctl.conf
 ```
 
-> 2.将设备宣传为退出节点
-
-
+> 2.将设备宣传为退出节点和开启子网路由
+- **openwrt输入以下命令**
 ```
 tailscale set --advertise-routes=10.0.0.0/24 --advertise-exit-node --accept-dns=false
 ```
+- **istoreos**输入以下命令**
 至此，就完成了在OpenWrt 22.03及更高版本安装Tailscale，并完成了基础配置。
