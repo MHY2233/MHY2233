@@ -5,7 +5,7 @@
 > ### 1.安装程序
 
 ```
-wget https://github.com/cloud-fs/cloud-fs.github.io/releases/download/v0.7.3/clouddrive-2-linux-aarch64-0.7.3.tgz && tar -zxvf clouddrive-2-linux-aarch64-0.6.14.tgz && mv clouddrive-2-linux-aarch64-0.6.14 /usr/local/bin/clouddrive-2 && rm ~/clouddrive-2-linux-aarch64-0.7.3.tgz
+wget https://github.com/cloud-fs/cloud-fs.github.io/releases/download/v0.7.6/clouddrive-2-linux-aarch64-0.7.6.tgz && tar -zxvf clouddrive-2-linux-aarch64-0.7.6.tgz && mv clouddrive-2-linux-aarch64-0.7.6 /usr/local/bin/clouddrive-2 && rm ~/clouddrive-2-linux-aarch64-0.7.6.tgz
 ```
 
 > ### 2.配置开机启动
@@ -39,11 +39,11 @@ systemctl enable --now clouddrive
 systemctl status clouddrive
 ```
 
-# OPENWRT软路由部署</summary>
+# OPENWRT软路由部署
 
 > ### 1. 下载安装程序
 ```
-wget https://github.com/cloud-fs/cloud-fs.github.io/releases/download/v0.7.6/clouddrive-2-linux-x86_64-0.7.6.tgz && tar -zxvf clouddrive-2-linux-x86_64-0.7.6.tgz && mv clouddrive-2-linux-x86_64-0.7.6.tgz /usr/bin/clouddrive-2 && rm clouddrive-2-linux-x86_64-0.7.6.tgz
+wget https://github.com/cloud-fs/cloud-fs.github.io/releases/download/v0.7.6/clouddrive-2-linux-x86_64-0.7.6.tgz && tar -zxvf clouddrive-2-linux-x86_64-0.7.6.tgz && mv clouddrive-2-linux-x86_64-0.7.6 /usr/bin/clouddrive-2 && rm clouddrive-2-linux-x86_64-0.7.6.tgz
 ```
 > ### 2. 配置开机启动
 ```
