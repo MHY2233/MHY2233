@@ -1,6 +1,6 @@
 # [查看最新发行版](https://github.com/cloud-fs/cloud-fs.github.io/releases) 
 
-# VPS服务器部署
+## VPS服务器部署
 
 > ### 1.安装程序
 
@@ -39,7 +39,7 @@ systemctl enable --now clouddrive
 systemctl status clouddrive
 ```
 
-# OPENWRT软路由部署
+## OPENWRT软路由部署
 
 > ### 1. 下载安装程序
 ```
