@@ -42,7 +42,7 @@ MSS钳制：开启
 点击“保存并应用”。
 ```
 
-### 第五步 开启子网路由和外出节点
+### 第五步 开启子网路由和出口节点
 
 > 1.开启ip转发
 
@@ -59,10 +59,10 @@ echo 'net.ipv6.conf.all.forwarding = 1' | tee -a /etc/sysctl.conf
 sysctl -p /etc/sysctl.conf
 ```
 
-> 2.将设备宣传为退出节点和开启子网路由
+> 2.将设备宣传为出口节点和开启子网路由
 - **openwrt输入以下命令**
 ```
-tailscale set --advertise-routes=10.0.0.0/24 --advertise-exit-node --accept-dns=false
+tailscale set --advertise-routes=192.168.100.0/24 --advertise-exit-node --accept-dns=false
 ```
 
 重启tailscale至此，就完成安装Tailscale，并完成了基础配置。
