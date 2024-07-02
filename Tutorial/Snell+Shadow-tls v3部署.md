@@ -1,5 +1,4 @@
-<details><summary>Snell节点搭建</summary>
-<p>
+## Snell节点搭建
 
 # [Snell 官方手册](https://manual.nssurge.com/others/snell.html)
 
@@ -63,11 +62,8 @@ systemctl enable --now snell-server
 ```
 systemctl status snell-server
 ```
-</p>
-</details>
 
-<details><summary>Shadow-Tls v3节点搭建</summary>
-<p>
+<deta## Shadow-Tls v3节点搭建
 
 - **1.下载Shadow-Tls**
 
@@ -115,9 +111,6 @@ systemctl daemon-reload && systemctl enable --now shadow-tls.service
 ```
 systemctl status shadow-tls.service
 ```
-</p>
-</details>
-
 
 
 ### Surge节点配置写法
