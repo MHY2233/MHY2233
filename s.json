@@ -1,0 +1,105 @@
+{
+    "log": {
+      "level": "info",
+      "timestamp": true
+    },
+    "dns": {
+      "servers": [
+        {
+          "tag": "cloudflare",
+          "address": "https://1.1.1.1/dns-query"
+        },
+        {
+          "tag": "dnspod",
+          "address": "https://1.12.12.12/dns-query",
+          "detour": "direct"
+        },
+        {
+          "tag": "block",
+          "address": "rcode://success"
+        }
+      ],
+      "rules": [
+        {
+          "geosite": "cn",
+          "server": "dnspod"
+        },
+        {
+          "geosite": "category-ads-all",
+          "server": "block",
+          "disable_cache": true
+        }
+      ]
+    },
+    "inbounds": [
+      {
+        "type": "tun",
+        "tag": "tun-in",
+        "interface_name": "utun",
+        "inet4_address": "172.19.0.1/30",
+        "auto_route": true,
+        "strict_route": true,
+        "stack": "gvisor",
+        "sniff": true
+      }
+    ],
+    "outbounds": [
+      {
+        "tag": "bwg", # tag和下边route中的要一致
+        "type": "vless",
+        "server": "自己的IP",
+        "server_port": 自己的端口,
+        "uuid": "自己的UUID", 
+        "flow": "xtls-rprx-vision",
+        "network": "tcp",
+        "packet_encoding": "xudp",
+        "tls": {
+          "enabled": true,
+          "server_name": "www.microsoft.com", # 根据需要改成自己的
+          "utls": {
+            "enabled": true,
+            "fingerprint": "chrome"
+          },
+          "reality": {
+            "enabled": true,
+            "public_key": "自己的Public_key",
+            "short_id": "自己的short_id"
+          }
+        }
+      },
+      {
+        "type": "direct",
+        "tag": "direct"
+      },
+      {
+        "type": "block",
+        "tag": "block"
+      },
+      {
+        "type": "dns",
+        "tag": "dns"
+      }
+    ],
+    "route": {
+      "rules": [
+        {
+          "protocol": "dns",
+          "outbound": "dns"
+        },
+        {
+          "geosite": "cn",
+          "geoip": [
+            "cn",
+            "private"
+          ],
+          "outbound": "direct"
+        },
+        {
+          "geosite": "category-ads-all",
+          "outbound": "block"
+        }
+      ],
+      "auto_detect_interface": true,
+      "final": "bwg"
+    }
+  }
