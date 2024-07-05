@@ -1,8 +1,7 @@
 # [Trojan-Go版本查看](https://github.com/p4gefau1t/trojan-go) 
 
 
-<details><summary>1. 安装nginx </summary>
-<p>
+1. 安装nginx
 
 ### [NGINX安装](https://nginx.org/en/linux_packages.html#Debian)
  
@@ -36,9 +35,6 @@ nginx -s reload
 ```
 systemctl restart ngunx 
 ```
-
-<p>
-</details>
 
 
 
