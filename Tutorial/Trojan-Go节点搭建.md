@@ -38,14 +38,7 @@ systemctl restart ngunx
 
 
 
-
-
-
-
-
-
-<details><summary>2. 安装Trojan-Go</summary>
-<p>
+2. 安装Trojan-Go
 
 - **安装 Trojan-GO**
 
@@ -129,5 +122,3 @@ journalctl -u trojan-go -o cat -f
 ```
 systemctl disable --now trojan-go && rm -rf /usr/local/bin/trojan-go /usr/local/etc/trojan-go /etc/systemd/system/trojan-go.service
 ```
-<p>
-</details>
