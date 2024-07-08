@@ -65,30 +65,6 @@
   "outbounds": [
     {
       "type": "selector",
-      "tag": "proxy",
-      "outbounds": [
-        "USA",
-        "JAPAN",
-        "JP",
-        "AUTO"
-      ],
-      "default": "AUTO",
-      "interrupt_exist_connections": false
-    },
-    {
-      "type": "urltest",
-      "tag": "AUTO",
-      "outbounds": [
-        "USA",
-        "JAPAN",
-        "JP"
-      ],
-      "url": "http://www.gastatic.com/generate_204",
-      "interval": "10m",
-      "interrupt_exist_connections": true
-    },
-    {
-      "type": "selector",
       "tag": "Proxy",
       "outbounds": [
         "USA",
