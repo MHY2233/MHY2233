@@ -1,0 +1,196 @@
+{
+  "log": {
+    "disabled": false,
+    "level": "warn",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "default-dns",
+        "address": "223.5.5.5",
+        "detour": "direct-out"
+      },
+      {
+        "tag": "system-dns",
+        "address": "local",
+        "detour": "direct-out"
+      },
+      {
+        "tag": "block-dns",
+        "address": "rcode://name_error"
+      },
+      {
+        "tag": "google",
+        "address": "https://dns.google/dns-query",
+        "address_resolver": "default-dns",
+        "address_strategy": "ipv4_only",
+        "strategy": "ipv4_only",
+        "client_subnet": "1.0.1.0"
+      }
+    ],
+    "rules": [
+      {
+        "outbound": "any",
+        "server": "default-dns"
+      },
+      {
+        "query_type": "HTTPS",
+        "server": "block-dns"
+      },
+      {
+        "rule_set": "cnsite",
+        "server": "default-dns"
+      }
+    ],
+    "strategy": "ipv4_only",
+    "disable_cache": false,
+    "disable_expire": false,
+    "independent_cache": false,
+    "final": "google"
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "inet4_address": "172.19.0.1/30",
+      "mtu": 9000,
+      "gso": true,
+      "auto_route": true,
+      "stack": "system",
+      "sniff": true,
+      "sniff_override_destination": false
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "selector",
+      "tag": "Proxy",
+      "outbounds": [
+        "USA",
+        "JAPAN",
+        "JP",
+        "AUTO"
+      ],
+      "default": "AUTO",
+      "interrupt_exist_connections": false
+    },
+    {
+      "type": "urltest",
+      "tag": "AUTO",
+      "outbounds": [
+        "USA",
+        "JAPAN",
+        "JP"
+      ],
+      "url": "http://www.gastatic.com/generate_204",
+      "interval": "10m",
+      "interrupt_exist_connections": true
+    },
+    {
+      "type": "direct",
+      "tag": "direct-out",
+      "routing_mark": 100
+    },
+    {
+      "type": "block",
+      "tag": "block-out"
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    },  
+    {
+      "type": "trojan",
+      "tag": "JAPAN",
+      "server": "mhy2253.com",
+      "server_port": 443,
+      "password": "fullchain.pem_private.key",
+      "tls": {
+        "enabled": true,
+        "server_name": "mhy2253.com",
+        "insecure": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "USA",
+      "server": "linkload.io",
+      "server_port": 443,
+      "password": "xHvse7n9wLy#aBBMhy2253",
+      "tls": {
+        "enabled": true,
+        "server_name": "linkload.io",
+        "insecure": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "JP",
+      "server": "aca-cm-js-4g.cfprefer1.xyz",
+      "server_port": 19563,
+      "method": "aes-256-gcm",
+      "password": "2da24bc7-9bab-471f-9bd3-74ec2b5bac93",
+      "multiplex": {
+        "enabled": true
+      }
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "protocol": "dns",
+        "outbound": "dns-out"
+      },
+      {
+        "protocol": "quic",
+        "outbound": "block-out"
+      },
+      {
+        "rule_set": [
+          "cnip",
+          "cnsite"
+        ],
+        "outbound": "direct-out"
+      }
+    ],
+    "rule_set": [
+      {
+        "type": "remote",
+        "tag": "cnip",
+        "format": "binary",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geoip/cn.srs",
+        "download_detour": "Proxy"
+      },
+      {
+        "type": "remote",
+        "tag": "cnsite",
+        "format": "binary",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geosite/cn.srs",
+        "download_detour": "Proxy"
+      },
+      {
+        "type": "remote",
+        "tag": "applesite",
+        "format": "binary",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geosite/apple.srs",
+        "download_detour": "Proxy"
+      }
+    ],
+    "auto_detect_interface": true,
+    "final": "Proxy"
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true
+    }
+  }
+}
