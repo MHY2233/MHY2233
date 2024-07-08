@@ -78,7 +78,6 @@
       "outbounds": [
         "USA",
         "JAPAN",
-        "JP",
         "AUTO"
       ],
       "default": "AUTO",
@@ -90,11 +89,42 @@
       "outbounds": [
         "USA",
         "JAPAN",
-        "JP"
       ],
       "url": "http://www.gastatic.com/generate_204",
       "interval": "10m",
       "interrupt_exist_connections": true
+    },
+    {
+      "type": "trojan",
+      "tag": "JAPAN",
+      "server": "mhy2253.com",
+      "server_port": 443,
+      "password": "fullchain.pem_private.key",
+      "tls": {
+        "enabled": true,
+        "server_name": "mhy2253.com",
+        "insecure": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "USA",
+      "server": "linkload.io",
+      "server_port": 443,
+      "password": "xHvse7n9wLy#aBBMhy2253",
+      "tls": {
+        "enabled": true,
+        "server_name": "linkload.io",
+        "insecure": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
     },
     {
       "type": "direct",
