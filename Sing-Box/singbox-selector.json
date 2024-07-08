@@ -231,24 +231,40 @@
     },
     // 以下通过四个节点来演示，请替换对应的节点配置以及 selector和urltest中的outbounds(填代理节点的tag)
     {
-      "tag": "美国节点1",
-      "type": "vless"
+      "type": "trojan",
+      "tag": "JAPAN",
+      "server": "mhy2253.com",
+      "server_port": 443,
+      "password": "fullchain.pem_private.key",
+      "tls": {
+        "enabled": true,
+        "server_name": "mhy2253.com",
+        "insecure": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
     },
     {
-      "tag": "美国节点2",
-      "type": "vless"
+      "type": "trojan",
+      "tag": "USA",
+      "server": "linkload.io",
+      "server_port": 443,
+      "password": "xHvse7n9wLy#aBBMhy2253",
+      "tls": {
+        "enabled": true,
+        "server_name": "linkload.io",
+        "insecure": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
     },
     {
-      "tag": "香港节点",
-      "type": "vmess"
-    },
-    {
-      "tag": "日本节点",
-      "type": "vmess"
-    },
-    {
-      "default": "香港节点",
-      "outbounds": ["香港节点", "日本节点", "美国节点1", "美国节点2", "🏎️Auto"],
+      "default": "JAPAN",
+      "outbounds": ["JAPAN", "USA", "🏎️Auto"],
       "tag": "🌐代理",
       "type": "selector"
     },
@@ -259,7 +275,7 @@
       "type": "selector"
     },
     {
-      "outbounds": ["香港节点", "日本节点", "美国节点1", "美国节点2"],
+      "outbounds": ["JAPAN", "USA"],
       "interval": "3m",
       "tag": "🏎️Auto",
       "type": "urltest",
@@ -298,7 +314,7 @@
     },
     "clash_api": {
       // IP改为自己实际的IP，或者回环地址127.0.0.1，如果需要其他设备访问，需要改为实际的IP
-      "external_controller": "192.168.1.168:9090",
+      "external_controller": "0.0.0.0:9090",
       "external_ui_download_url": "",
       "secret": "",
       "default_mode": "",
