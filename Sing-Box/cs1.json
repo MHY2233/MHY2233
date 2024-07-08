@@ -55,17 +55,6 @@
     "disable_expire": false
   },
   "inbounds": [
-    // mixed、tun二选一；ios设备必须tun；具体配置根据实际情况调整
-    {
-      "type": "mixed",
-      "tag": "mixed-in",
-      "listen": "::",
-      "listen_port": 5353,
-      "tcp_fast_open": true,
-      "udp_fragment": true,
-      "sniff": true,
-      "set_system_proxy": true
-    },
     {
       "type": "tun",
       "tag": "tun-in",
