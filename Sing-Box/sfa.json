@@ -41,6 +41,14 @@
       {
         "rule_set": "cnsite",
         "server": "default-dns"
+      },
+      {
+        "rule_set": "applesite",
+        "server": "default-dns"
+      },
+      {
+        "rule_set": "proxysite",
+        "server": "google"
       }
     ],
     "strategy": "ipv4_only",
@@ -69,7 +77,6 @@
       "outbounds": [
         "USA",
         "JAPAN",
-        "JP",
         "AUTO"
       ],
       "default": "AUTO",
@@ -80,8 +87,7 @@
       "tag": "AUTO",
       "outbounds": [
         "USA",
-        "JAPAN",
-        "JP"
+        "JAPAN"
       ],
       "url": "http://www.gastatic.com/generate_204",
       "interval": "10m",
@@ -103,12 +109,12 @@
     {
       "type": "trojan",
       "tag": "JAPAN",
-      "server": "mhy2253.com",
+      "server": "domain.com",
       "server_port": 443,
       "password": "fullchain.pem_private.key",
       "tls": {
         "enabled": true,
-        "server_name": "mhy2253.com",
+        "server_name": "domain.com",
         "insecure": true,
         "utls": {
           "enabled": true,
@@ -119,28 +125,17 @@
     {
       "type": "trojan",
       "tag": "USA",
-      "server": "linkload.io",
+      "server": "domain",
       "server_port": 443,
       "password": "xHvse7n9wLy#aBBMhy2253",
       "tls": {
         "enabled": true,
-        "server_name": "linkload.io",
+        "server_name": "domain",
         "insecure": true,
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "JP",
-      "server": "aca-cm-js-4g.cfprefer1.xyz",
-      "server_port": 19563,
-      "method": "aes-256-gcm",
-      "password": "2da24bc7-9bab-471f-9bd3-74ec2b5bac93",
-      "multiplex": {
-        "enabled": true
       }
     }
   ],
@@ -157,9 +152,16 @@
       {
         "rule_set": [
           "cnip",
-          "cnsite"
+          "cnsite",
+          "applesite"
         ],
         "outbound": "direct-out"
+      },
+      {
+        "rule_set": [
+          "proxysite"
+        ],
+        "outbound": "Proxy"
       }
     ],
     "rule_set": [
@@ -183,7 +185,15 @@
         "format": "binary",
         "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geosite/apple.srs",
         "download_detour": "Proxy"
+      },
+      {
+        "type": "remote",
+        "tag": "proxysite",
+        "format": "binary",
+        "url": "https://github.com/MetaCubeX/meta-rules-dat/raw/sing/geo-lite/geosite/proxy.srs",
+        "download_detour": "Proxy"
       }
+
     ],
     "auto_detect_interface": true,
     "final": "Proxy"
