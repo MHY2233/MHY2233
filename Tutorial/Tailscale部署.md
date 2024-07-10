@@ -62,7 +62,7 @@ sysctl -p /etc/sysctl.conf
 > 2.将设备宣传为出口节点和开启子网路由
 - **openwrt输入以下命令**
 ```
-tailscale set --advertise-routes=192.168.10.0/24 --advertise-exit-node --accept-dns=false
+tailscale set --advertise-routes=192.168.1.0/24 --advertise-exit-node --accept-dns=false
 ```
 
 重启tailscale至此，就完成安装Tailscale，并完成了基础配置。
