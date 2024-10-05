@@ -73,12 +73,14 @@ dns:
     "geosite:geolocation-!cn":
       - "https://dns.cloudflare.com/dns-query"
       - "https://dns.google/dns-query"
-
 proxy-groups:
-  - name: 自动选择
+  - name: "Proxy"
     type: url-test
-    include-all: true
-    tolerance: 10
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - USA
 
 rules:
   - GEOIP,lan,直连,no-resolve
