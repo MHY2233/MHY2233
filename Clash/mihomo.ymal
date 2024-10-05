@@ -1,7 +1,16 @@
-proxies: 
-  - name: "直连"
-    type: direct
+proxies:
+  - name: "USA"                     
+    type: trojan
+    server: linkload.io                       
+    port: 443                                     
+    password: password                           
+    client-fingerprint: chrome
     udp: true
+    sni: linkload.io                         
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: true
 
 mixed-port: 7890
 ipv6: true
@@ -83,22 +92,23 @@ proxy-groups:
       - USA
 
 rules:
-  - GEOIP,lan,直连,no-resolve
-  - GEOSITE,github,Github
-  - GEOSITE,twitter,Twitter
-  - GEOSITE,youtube,YouTube
-  - GEOSITE,google,Google
-  - GEOSITE,telegram,Telegram
-  - GEOSITE,netflix,NETFLIX
-  - GEOSITE,bilibili,哔哩哔哩
-  - GEOSITE,bahamut,巴哈姆特
-  - GEOSITE,spotify,Spotify
-  - GEOSITE,CN,国内
-  - GEOSITE,geolocation-!cn,其他
+  - GEOIP,lan,DIRECT,no-resolve
+  - GEOSITE,apple,DIRECT
+  - GEOSITE,github,Proxy
+  - GEOSITE,twitter,Proxy
+  - GEOSITE,youtube,Proxy
+  - GEOSITE,google,Proxy
+  - GEOSITE,telegram,Proxy
+  - GEOSITE,netflix,Proxy
+  - GEOSITE,bilibili,DIRECT
+  - GEOSITE,bahamut,Proxy
+  - GEOSITE,spotify,Proxy
+  - GEOSITE,CN,DIRECT
+  - GEOSITE,geolocation-!cn,DIRECT
 
-  - GEOIP,google,Google
-  - GEOIP,netflix,NETFLIX
-  - GEOIP,telegram,Telegram
-  - GEOIP,twitter,Twitter
-  - GEOIP,CN,国内
-  - MATCH,其他
+  - GEOIP,google,Proxy
+  - GEOIP,netflix,Proxy
+  - GEOIP,telegram,Proxy
+  - GEOIP,twitter,Proxy
+  - GEOIP,CN,DIRECT
+  - MATCH,Proxy
