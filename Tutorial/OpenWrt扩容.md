@@ -1,3 +1,15 @@
+安装前直接扩容镜像：
+
+扩容镜像需要linux系统：可以是openwrt、debian、ubuntu等
+
+openwrt中执行确认是否具备所需依赖：
+
+```
+which gzip
+which dd
+which parted
+```
+
 ```
 # 切换到根目录
 cd /
